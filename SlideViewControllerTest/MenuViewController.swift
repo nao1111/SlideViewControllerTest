@@ -72,11 +72,11 @@ class MenuViewController: UITableViewController {
         
         var cell = tableView.dequeueReusableCellWithIdentifier(cellidentifier) as! UITableViewCell?
         
-        if ( cell == nil ) {
+        if cell == nil {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: cellidentifier)
         }
         
-        if ( indexPath.section == 0 ) {
+        if indexPath.section == 0 {
             let titles = ["Home", "Second", "Menu1-Title3"]
             cell?.textLabel?.text = titles[indexPath.row]
         } else {
@@ -85,5 +85,28 @@ class MenuViewController: UITableViewController {
         }
         
         return cell!
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        let navigationController = self.storyboard?.instantiateViewControllerWithIdentifier("contentController") as! NavigationController
+        
+        if indexPath.section == 0 && indexPath.row == 0 {
+            let homeViewController = self.storyboard?.instantiateViewControllerWithIdentifier("homeController") as! HomeViewController
+            navigationController.viewControllers = [homeViewController]
+            
+            self.frostedViewController.contentViewController = navigationController
+            self.frostedViewController.hideMenuViewController()
+            
+        } else if indexPath.section == 0 && indexPath.row == 1 {
+            let secondViewController = self.storyboard?.instantiateViewControllerWithIdentifier("secondController") as! SecondViewController
+            navigationController.viewControllers = [secondViewController]
+            
+            self.frostedViewController.contentViewController = navigationController
+            self.frostedViewController.hideMenuViewController()
+        }
+        
+        
     }
 }
