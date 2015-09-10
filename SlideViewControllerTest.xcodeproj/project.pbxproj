@@ -29,6 +29,7 @@
 /* Begin PBXFileReference section */
 		2D3441E37A553C9C8C4E52F8 /* Pods-SlideViewControllerTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideViewControllerTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SlideViewControllerTest/Pods-SlideViewControllerTest.debug.xcconfig"; sourceTree = "<group>"; };
 		4BFEDB24B09DED9262EE49D4 /* Pods-SlideViewControllerTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideViewControllerTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-SlideViewControllerTest/Pods-SlideViewControllerTest.release.xcconfig"; sourceTree = "<group>"; };
+		B02E53001BA122D3005A2937 /* BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		B07DD12F1BA1212400C12F2C /* SlideViewControllerTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideViewControllerTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B07DD1331BA1212400C12F2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B07DD1341BA1212400C12F2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +107,7 @@
 		B07DD1321BA1212400C12F2C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B02E53001BA122D3005A2937 /* BridgingHeader.h */,
 				B07DD1331BA1212400C12F2C /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -403,6 +405,7 @@
 				INFOPLIST_FILE = SlideViewControllerTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/BridgingHeader.h";
 			};
 			name = Debug;
 		};
@@ -414,6 +417,7 @@
 				INFOPLIST_FILE = SlideViewControllerTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/BridgingHeader.h";
 			};
 			name = Release;
 		};
