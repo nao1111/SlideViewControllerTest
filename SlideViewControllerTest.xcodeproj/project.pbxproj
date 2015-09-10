@@ -13,6 +13,7 @@
 		B07DD13C1BA1212400C12F2C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B07DD13B1BA1212400C12F2C /* Images.xcassets */; };
 		B07DD13F1BA1212400C12F2C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B07DD13D1BA1212400C12F2C /* LaunchScreen.xib */; };
 		B07DD14B1BA1212400C12F2C /* SlideViewControllerTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07DD14A1BA1212400C12F2C /* SlideViewControllerTestTests.swift */; };
+		F827A5C61FA59B628271A75C /* libPods-SlideViewControllerTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B868A83C956389B8C1093A63 /* libPods-SlideViewControllerTest.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +27,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2D3441E37A553C9C8C4E52F8 /* Pods-SlideViewControllerTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideViewControllerTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SlideViewControllerTest/Pods-SlideViewControllerTest.debug.xcconfig"; sourceTree = "<group>"; };
+		4BFEDB24B09DED9262EE49D4 /* Pods-SlideViewControllerTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlideViewControllerTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-SlideViewControllerTest/Pods-SlideViewControllerTest.release.xcconfig"; sourceTree = "<group>"; };
 		B07DD12F1BA1212400C12F2C /* SlideViewControllerTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlideViewControllerTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B07DD1331BA1212400C12F2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B07DD1341BA1212400C12F2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +39,7 @@
 		B07DD1441BA1212400C12F2C /* SlideViewControllerTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlideViewControllerTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B07DD1491BA1212400C12F2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B07DD14A1BA1212400C12F2C /* SlideViewControllerTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideViewControllerTestTests.swift; sourceTree = "<group>"; };
+		B868A83C956389B8C1093A63 /* libPods-SlideViewControllerTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SlideViewControllerTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F827A5C61FA59B628271A75C /* libPods-SlideViewControllerTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +61,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B79F8CFBE7777C3DB24912E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2D3441E37A553C9C8C4E52F8 /* Pods-SlideViewControllerTest.debug.xcconfig */,
+				4BFEDB24B09DED9262EE49D4 /* Pods-SlideViewControllerTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B07DD1261BA1212400C12F2C = {
 			isa = PBXGroup;
 			children = (
 				B07DD1311BA1212400C12F2C /* SlideViewControllerTest */,
 				B07DD1471BA1212400C12F2C /* SlideViewControllerTestTests */,
 				B07DD1301BA1212400C12F2C /* Products */,
+				4B79F8CFBE7777C3DB24912E /* Pods */,
+				CAF0C47EB20EB17F46FE212E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +128,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		CAF0C47EB20EB17F46FE212E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B868A83C956389B8C1093A63 /* libPods-SlideViewControllerTest.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +143,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B07DD14E1BA1212400C12F2C /* Build configuration list for PBXNativeTarget "SlideViewControllerTest" */;
 			buildPhases = (
+				E000E70381C5837C6585B3E4 /* Check Pods Manifest.lock */,
 				B07DD12B1BA1212400C12F2C /* Sources */,
 				B07DD12C1BA1212400C12F2C /* Frameworks */,
 				B07DD12D1BA1212400C12F2C /* Resources */,
+				DFA3CFF66082265423079357 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,6 +232,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DFA3CFF66082265423079357 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SlideViewControllerTest/Pods-SlideViewControllerTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E000E70381C5837C6585B3E4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B07DD12B1BA1212400C12F2C /* Sources */ = {
@@ -338,6 +397,7 @@
 		};
 		B07DD14F1BA1212400C12F2C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D3441E37A553C9C8C4E52F8 /* Pods-SlideViewControllerTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SlideViewControllerTest/Info.plist;
@@ -348,6 +408,7 @@
 		};
 		B07DD1501BA1212400C12F2C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BFEDB24B09DED9262EE49D4 /* Pods-SlideViewControllerTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SlideViewControllerTest/Info.plist;
@@ -409,6 +470,7 @@
 				B07DD1501BA1212400C12F2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B07DD1511BA1212400C12F2C /* Build configuration list for PBXNativeTarget "SlideViewControllerTestTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +479,7 @@
 				B07DD1531BA1212400C12F2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
