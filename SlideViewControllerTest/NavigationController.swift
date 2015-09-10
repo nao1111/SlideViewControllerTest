@@ -10,4 +10,13 @@ import UIKit
 
 class NavigationController: UINavigationController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.view.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: "panGestureRecognized:"))
+    }
+    
+    func panGestureRecognized(sender: UIPanGestureRecognizer) {
+        self.frostedViewController.panGestureRecognized(sender)
+    }
 }
