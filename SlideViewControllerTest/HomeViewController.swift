@@ -11,5 +11,7 @@ import UIKit
 class HomeViewController: UIViewController {
     
     @IBAction func showMenu(sender: AnyObject) {
+        self.frostedViewController.presentMenuViewController()
     }
+    
 }
