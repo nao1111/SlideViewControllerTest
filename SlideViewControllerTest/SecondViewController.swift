@@ -10,6 +10,12 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.view.backgroundColor = UIColor.greenColor()
+    }
+    
     @IBAction func showMenu(sender: AnyObject) {
         self.frostedViewController.presentMenuViewController()
     }

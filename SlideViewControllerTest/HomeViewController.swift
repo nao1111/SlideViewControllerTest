@@ -9,6 +9,12 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.view.backgroundColor = UIColor.yellowColor()
+    }
     
     @IBAction func showMenu(sender: AnyObject) {
         self.frostedViewController.presentMenuViewController()
