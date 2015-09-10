@@ -10,4 +10,6 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
+    @IBAction func showMenu(sender: AnyObject) {
+    }
 }
