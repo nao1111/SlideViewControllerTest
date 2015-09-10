@@ -18,6 +18,8 @@ class MenuViewController: UITableViewController {
         self.tableView.dataSource = self
         self.tableView.opaque = false
         self.tableView.backgroundColor = UIColor.clearColor()
+        
+        self.tableView.tableHeaderView = self.makeTableHeaderView()
     }
     
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
@@ -38,7 +40,7 @@ class MenuViewController: UITableViewController {
         if section == 0 {
             label.text = "Menu1"
         } else {
-            label.text = "Friends Online"
+            label.text = "Menu2"
         }
         
         label.sizeToFit()
@@ -107,6 +109,31 @@ class MenuViewController: UITableViewController {
             self.frostedViewController.hideMenuViewController()
         }
         
+    }
+    
+    func makeTableHeaderView() -> UIView {
+        let view = UIView(frame: CGRectMake(0, 0, 0, 184.0))
+        let imageView = UIImageView(frame: CGRectMake(0, 40, 100, 100))
+        imageView.autoresizingMask = UIViewAutoresizing.FlexibleLeftMargin | UIViewAutoresizing.FlexibleRightMargin
+        imageView.image = UIImage(named: "sample.gif")
+        imageView.layer.masksToBounds = true
+        imageView.layer.cornerRadius = 50.0
+        imageView.layer.borderColor = UIColor.whiteColor().CGColor
+        imageView.layer.rasterizationScale = UIScreen.mainScreen().scale
+        imageView.layer.shouldRasterize = true
+        imageView.clipsToBounds = true
         
+        let label = UILabel(frame: CGRectMake(0, 150, 0, 24))
+        label.text = "First Last"
+        label.font = UIFont(name: "HelveticaNeue", size: 21)
+        label.backgroundColor = UIColor.clearColor()
+        label.textColor = UIColor(red: 62/255.0, green: 68/255.0, blue: 75/255.0, alpha: 1.0)
+        label.sizeToFit()
+        label.autoresizingMask = UIViewAutoresizing.FlexibleLeftMargin | UIViewAutoresizing.FlexibleRightMargin
+        
+        view.addSubview(imageView)
+        view.addSubview(label)
+        
+        return view
     }
 }
